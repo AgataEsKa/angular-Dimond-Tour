@@ -1,0 +1,21 @@
+<h2>My Tours</h2>
+
+<div>
+  <label>Tour name:
+    <input #tourName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(tourName.value); tourName.value=''">
+    add
+  </button>
+</div>
+
+<ul class="tours">
+  <li *ngFor="let tour of tours">
+    <a routerLink="/detail/{{tour.id}}">
+      <span class="badge">{{tour.id}}</span> {{tour.name}}
+    </a>
+    <button class="delete" title="delete tour"
+    (click)="delete(tour)">x</button>
+  </li>
+</ul>

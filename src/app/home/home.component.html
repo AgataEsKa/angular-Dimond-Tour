@@ -1,0 +1,11 @@
+<h3>Top Tours</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let tour of tours" class="col-1-4"
+      routerLink="/detail/{{tour.id}}">
+    <div class="module tour">
+      <h4>{{tour.name}}</h4>
+    </div>
+  </a>
+</div>
+
+<app-tour-search></app-tour-search>

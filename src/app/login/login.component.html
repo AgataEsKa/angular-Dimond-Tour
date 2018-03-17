@@ -1,0 +1,21 @@
+<h2>{{ page.name | uppercase }} Details</h2>
+
+<div>
+  <label *ngIf="!logged">login:
+    <input placeholder="login"/>
+  </label>
+</div>
+
+<div>
+  <label *ngIf="!logged">haslo:
+    <input  placeholder="haslo"/>
+  </label>
+</div>
+
+
+
+<button (click)="goBack()">go back</button>
+
+<!--<button (click)="logout()">logout</button>-->
+
+<button *ngIf="!logged" (click)="save()">login</button>

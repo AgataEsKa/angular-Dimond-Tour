@@ -1,0 +1,13 @@
+<h1>DIMOND TOUR</h1>
+<nav>
+  <a routerLink="/home">Home</a>
+  <a routerLink="/tours">Timetable</a>
+  <a routerLink="/about-us">About Us</a>
+  <a routerLink="/add-edit-atour" *ngIf="logged">Add/Edit a Tour</a>
+  <a routerLink="/make-reservation">Make Reservation</a>
+  <a routerLink="/contact-us">Contact Us</a>
+  <a routerLink="/login" *ngIf="!logged">Login</a>
+  <a routerLink="/login" (click)="logout()" *ngIf="logged">Logout</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>

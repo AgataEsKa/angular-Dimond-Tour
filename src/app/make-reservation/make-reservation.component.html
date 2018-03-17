@@ -1,0 +1,46 @@
+<div ng-if="reservation">
+
+  <div>
+    <label>id:
+      <input #userId name="userId" ngModel placeholder="id"/>
+    </label>
+  </div>
+
+  <div>
+    <label>name:
+      <input #userName name="userName" ngModel placeholder="name"/>
+    </label>
+  </div>
+
+  <div>
+    <label>surname:
+      <input #userSurname surname="userSurname" ngModel placeholder="surname"/>
+    </label>
+  </div>
+
+  <div>
+    <label>address:
+      <input #userAddress address="userAddress" ngModel placeholder="address"/>
+    </label>
+  </div>
+
+  <div>
+    <label>e-mail address:
+      <input #userEmailAddress emailAddress="emailAddress" ngModel placeholder="e-mail address"/>
+    </label>
+  </div>
+
+  <div>
+    <label>phone number:
+      <input #userPhoneNumber name="phoneNumber" ngModel placeholder="phoneNumber"/>
+    </label>
+  </div>
+
+</div>
+
+
+<button (click)="goBack()">go back</button>
+
+
+<button (click)="save(userId.value, userName.value, userSurname.value, userAddress.value,
+userEmailAddress.value, userPhoneNumber.value); userName.value=''">save</button>
